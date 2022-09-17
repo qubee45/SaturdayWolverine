@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class EbaySearchResultLocators {
 	
-	@FindBy(xpath="//span[2][contains(text(),'shoes')]")
+	@FindBy(xpath="//span[contains(text(),'shoes')]")
 	public WebElement txtShoes;
 	
 	@FindBy(xpath="//span[2][contains(text(),'shirts')]")

@@ -1,18 +1,17 @@
-@regreesion @smoke @us-240
+@regreesion @smoke @us-240 
 Feature: Ebay Brand Outline 
 
-Description: User should able to filter items by Brand
+	Description: User should able to filter items by Brand
 
 Background: 
-		Given Open Ebay Homepage
-
-Scenario Outline: Filter items by Brand
-
-	Given Search for "<Items>"
-	When Filter by "<Brand>"
-	Then Item list should have products of "<Brand>"
+	Given Open Ebay Homepage 
 	
-	Examples:
+Scenario Outline: Filter items by Brand 
+	Given Search for "<Items>" 
+	When Filter by "<Brand>" 
+	Then Item list should have products of "<Brand>" 
+	
+	Examples: 
 		|Items		|Brand		|
 		|Shoes		|Nike		|
 		|Shirts		|Adidas		|

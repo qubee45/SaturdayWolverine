@@ -1,4 +1,4 @@
-@regression @somke @SKYW-15 @E2E
+@regression @smoke @SKYW-15 @E2E
 Feature: Ebay Search Functionality
 
 Scenario: Search for Shoes
