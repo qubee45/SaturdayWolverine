@@ -5,22 +5,24 @@ import org.openqa.selenium.support.FindBy;
 
 public class EbaySearchResultLocators {
 	
-	@FindBy(xpath="//span[contains(text(),'shoes')]")
+	@FindBy(xpath="//span[2][contains(text(),'Shoes')]")
 	public WebElement txtShoes;
 	
-	@FindBy(xpath="//span[2][contains(text(),'shirts')]")
+	@FindBy(xpath="//span[2][contains(text(),'Shirt')]")
 	public WebElement txtShirts;
 	
-	@FindBy(xpath="//span[2][contains(text(),'pants')]")
+	@FindBy(xpath="//span[2][contains(text(),'Pants')]")
 	public WebElement txtPants;
 	
 	@FindBy(xpath="//input[@aria-label='adidas']")
-	public WebElement cbxBrandAdidas;
+	public WebElement cbxAdidas;
 	
 	@FindBy(xpath="//input[@aria-label='Nike']")
-	public WebElement cbxBrandNike;
+	public WebElement cbxNike;
 	
 	@FindBy(xpath="//input[@aria-label='Unbranded']")
-	public WebElement cbxBrandUnbranded;
+	public WebElement cbxUnbranded;
 
+	@FindBy(xpath="//span[contains(text(),'Big & Tall Cotton Tee')]")
+	public WebElement linkShirt;
 }

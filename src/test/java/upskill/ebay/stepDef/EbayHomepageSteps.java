@@ -1,9 +1,6 @@
 package upskill.ebay.stepDef;
 
 
-
-
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import upskill.ebay.pageAction.EbayHomepageAction;
@@ -31,6 +28,16 @@ public class EbayHomepageSteps {
 	}
 
 
-
-
+	@Given("^Search for Shirt$")
+	public void search_for_Shirt() throws Throwable {
+		EbayHomepageActionobj.searchShirt();
+	}
+	@When("^Clicked on Toys$")
+	public void clicked_on_Toys() throws Throwable {
+		EbayHomepageActionobj.VerifyToys();
+	}
+	@When("^clicked on Electronics$")
+	public void clicked_on_Electronics() throws Throwable {
+		EbayHomepageActionobj.VeryfyElectronics();
+	}
 }

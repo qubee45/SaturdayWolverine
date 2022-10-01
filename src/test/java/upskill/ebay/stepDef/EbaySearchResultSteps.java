@@ -27,6 +27,10 @@ public class EbaySearchResultSteps {
 		
 		EbaySearchResultActionobj.verifyBrandItems(brand);
 	}
-
-
+	
+	
+	@When("^Select the first shirt on item list$")
+	public void select_the_first_shirt_on_item_list() throws Throwable {
+		EbaySearchResultActionobj.ShirtLink();
+	}
 }

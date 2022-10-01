@@ -26,34 +26,45 @@ public class EbayHomepageAction {
 			EbayHomepageLocatorsobj.textbxSearch.sendKeys("Shoes");
 			EbayHomepageLocatorsobj.btnSearch.click();
 		}
+		
+		 public void searchShirt() {
+				EbayHomepageLocatorsobj.textbxSearch.sendKeys("Big & Tall Cotton Tee");
+				EbayHomepageLocatorsobj.btnSearch.click();
+		 
+	}
 		 public void searchItems(String items) {
-			 EbayHomepageLocatorsobj.btnSearch.sendKeys(items);
-			 EbayHomepageLocatorsobj.btnSearch.clear();
+			 EbayHomepageLocatorsobj.textbxSearch.sendKeys(items);;
+			 EbayHomepageLocatorsobj.btnSearch.click();
 		 }
 	
 		 
-		 
-		 
-		 
-		 
-		 
-		 public void seleniumWaits() {
-			 System.out.println(SetupDrivers.driver.getTitle());
-			 SetupDrivers.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			 
-			 WebDriverWait wait = new WebDriverWait(SetupDrivers.driver,20);
-			 wait.until(ExpectedConditions.elementToBeClickable(EbayHomepageLocatorsobj.textbxSearch));
-			 
-			FluentWait fw = new FluentWait(SetupDrivers.driver);
-						fw.withTimeout(10, TimeUnit.SECONDS);
-						fw.pollingEvery(5, TimeUnit.SECONDS);
-						fw.ignoring(NoSuchElementException.class);
-						fw.withMessage("Time exceeded");
-						
 			
-			 
-		 }
-		 
-	}
+			  public void seleniumWaits() {
+			  System.out.println(SetupDrivers.driver.getTitle());
+			  SetupDrivers.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			  
+			  WebDriverWait wait = new WebDriverWait(SetupDrivers.driver,20);
+			  wait.until(ExpectedConditions.elementToBeClickable(EbayHomepageLocatorsobj.
+			  textbxSearch));
+			  
+			  FluentWait fw = new FluentWait(SetupDrivers.driver); 
+			  fw.withTimeout(10,TimeUnit.SECONDS); 
+			  fw.pollingEvery(5, TimeUnit.SECONDS);
+			  fw.ignoring(NoSuchElementException.class); 
+			  fw.withMessage("Time exceeded");
+			  
+			  
+			  
+			  }
+			  
+			  public void VerifyToys() {
+				  EbayHomepageLocatorsobj.txtToy.click();
+			  }
+			 public void VeryfyElectronics() throws Exception {
+				 EbayHomepageLocatorsobj.txtElectronic.click();
+				 Thread.sleep(1000);
+			 }
+	
+}
 
 

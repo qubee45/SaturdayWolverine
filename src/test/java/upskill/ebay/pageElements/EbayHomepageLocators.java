@@ -11,4 +11,11 @@ public class EbayHomepageLocators {
 	@FindBy(xpath="//input[@value='Search']")
 	public WebElement btnSearch;
 	
+	@FindBy(xpath="//a[1][text()='Toys']")
+	public WebElement txtToy;
+	
+	@FindBy(xpath="//a[text()='Electronics'][ancestor :: li]")
+	public WebElement txtElectronic;
+	
+	
 }
