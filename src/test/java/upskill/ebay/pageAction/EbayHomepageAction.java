@@ -4,6 +4,8 @@ import java.time.Duration;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -65,7 +67,18 @@ public class EbayHomepageAction {
 				 EbayHomepageLocatorsobj.txtElectronic.click();
 				 Thread.sleep(1000);
 			 }
-	
+			 public void mouseHoverMyEbay() {
+				 Actions action = new Actions(SetupDrivers.driver);
+				 
+				 action.moveToElement(EbayHomepageLocatorsobj.btnMyEbay);
+				 action.perform();
+				 
+				 
+			 }
+			 public void clickEbaySummary() {
+				 EbayHomepageLocatorsobj.btnSummary.isEnabled();
+				 EbayHomepageLocatorsobj.btnSummary.click();
+			 }
 }
 
 

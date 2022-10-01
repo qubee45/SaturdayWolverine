@@ -17,5 +17,10 @@ public class EbayHomepageLocators {
 	@FindBy(xpath="//a[text()='Electronics'][ancestor :: li]")
 	public WebElement txtElectronic;
 	
+	@FindBy(xpath="//a[@title='My eBay']")
+	public WebElement btnMyEbay;
+	
+	@FindBy(xpath="//a[contains(text(),'Summary')]")
+	public WebElement btnSummary;
 	
 }

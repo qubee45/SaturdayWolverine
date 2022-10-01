@@ -25,4 +25,6 @@ public class EbaySearchResultLocators {
 
 	@FindBy(xpath="//span[1][contains(text(),'Big & Tall Cotton Tee')]")
 	public WebElement linkShirt;
+	
+	
 }
