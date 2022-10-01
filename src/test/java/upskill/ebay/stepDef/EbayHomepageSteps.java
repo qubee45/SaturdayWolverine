@@ -31,6 +31,8 @@ public class EbayHomepageSteps {
 	@Given("^Search for Shirt$")
 	public void search_for_Shirt() throws Throwable {
 		EbayHomepageActionobj.searchShirt();
+		
+		
 	}
 	@When("^Clicked on Toys$")
 	public void clicked_on_Toys() throws Throwable {

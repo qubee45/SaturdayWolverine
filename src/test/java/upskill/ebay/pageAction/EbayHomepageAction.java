@@ -59,6 +59,7 @@ public class EbayHomepageAction {
 			  
 			  public void VerifyToys() {
 				  EbayHomepageLocatorsobj.txtToy.click();
+				  
 			  }
 			 public void VeryfyElectronics() throws Exception {
 				 EbayHomepageLocatorsobj.txtElectronic.click();

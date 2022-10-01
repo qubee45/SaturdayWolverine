@@ -63,4 +63,10 @@ public class EbaySearchResultAction {
 	public void ShirtLink() {
 		EbaySearchResultLocatorsobj.linkShirt.click();
 	}
+	
+	public void SwitchWindow() {
+		for (String winhandle: SetupDrivers.driver.getWindowHandles()) {
+			SetupDrivers.driver.switchTo().window(winhandle);
+		}
+	}
 }
