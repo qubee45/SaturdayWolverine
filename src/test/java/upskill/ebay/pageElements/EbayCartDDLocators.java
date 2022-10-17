@@ -3,20 +3,28 @@ package upskill.ebay.pageElements;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class CartDownPageLocator {
+public class EbayCartDDLocators {
 	
 	@FindBy(xpath="//select[@name='Size Type']")
-	public WebElement SizeType;
+	public WebElement sizeTypeDD;
+	
 	
 	@FindBy(xpath="//select[@id='msku-sel-2']")
-	public WebElement MenSize;
+	public WebElement manSizeDD;
+	
 	
 	@FindBy(xpath="//select[@name='Shade']")
-	public WebElement ColorShade;
+	public WebElement shadeDD;
 	
-	@FindBy(xpath="//input[@id='qtyTextBox']")
-	public WebElement txtbxQty;
+	
+	@FindBy(xpath="//input[@class='qtyInput']")
+	public WebElement qtyDD;
+	
+
 	
 	@FindBy(xpath="//a[@id='atcRedesignId_btn']")
-	public WebElement btnAddCart;
+	public WebElement addToCart;
+	
+	
+	
 }

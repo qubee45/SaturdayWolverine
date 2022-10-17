@@ -1,3 +1,4 @@
+@regression @smoke @Ebay-246
 Feature: Ebay Cart Functionality
 
 Description: User should able to add items in cart
@@ -13,3 +14,4 @@ Description: User should able to add items in cart
 		And Select Shade
 		And Select Quantity
 		Then Add to shopping cart
+    

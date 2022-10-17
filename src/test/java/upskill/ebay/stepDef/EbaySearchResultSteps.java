@@ -28,10 +28,24 @@ public class EbaySearchResultSteps {
 		EbaySearchResultActionobj.verifyBrandItems(brand);
 	}
 	
+	@When("^Region of Manufacture \"([^\"]*)\"$")
+	public void region_of_Manufacture(String region) throws Throwable {
+		EbaySearchResultActionobj.filterRegion(region);
+	}
+
+	@Then("^Item list should from \"([^\"]*)\"$")
+	public void item_list_should_from(String region) throws Throwable {
+		EbaySearchResultActionobj.verifyBrandRegion(region);
+	}
+	
 	
 	@When("^Select the first shirt on item list$")
 	public void select_the_first_shirt_on_item_list() throws Throwable {
-		EbaySearchResultActionobj.ShirtLink();
-		EbaySearchResultActionobj.SwitchWindow();
+	EbaySearchResultActionobj.firstShirtItem();
+	EbaySearchResultActionobj.switchNewWindow();
+		
+		
 	}
+	
+	
 }

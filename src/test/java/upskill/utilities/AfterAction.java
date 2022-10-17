@@ -7,8 +7,14 @@ import cucumber.api.java.After;
 
 public class AfterAction {
 	
+	TakeScreenShot TakeScreenShotObj = new TakeScreenShot();
+	
 	@After
-	public void afterAction(Scenario Scenario) {
+	public void afterAction(Scenario Scenario) throws Exception {
+		
+		if(Scenario.isFailed()) {
+			TakeScreenShotObj.screenshot();
+		}
 		
 		SetupDrivers.tearDownDriver();
 		System.out.println("--------Test Complete, Browser Closed");

@@ -23,4 +23,8 @@ public class EbayHomepageLocators {
 	@FindBy(xpath="//a[contains(text(),'Summary')]")
 	public WebElement btnSummary;
 	
+	
+	
+	
+	
 }

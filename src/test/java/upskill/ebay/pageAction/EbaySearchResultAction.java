@@ -60,13 +60,61 @@ public class EbaySearchResultAction {
 		
 
 }
-	public void ShirtLink() {
-		EbaySearchResultLocatorsobj.linkShirt.click();
-	}
 	
 	public void SwitchWindow() {
 		for (String winhandle: SetupDrivers.driver.getWindowHandles()) {
 			SetupDrivers.driver.switchTo().window(winhandle);
 		}
 	}
+	
+	public void filterRegion(String region) {
+		if (region.equals("China")) {
+			
+			EbaySearchResultLocatorsobj.linkCountry.click();
+		EbaySearchResultLocatorsobj.cbxChina.click();
+		}
+		else if (region.equals("Bangladesh"))
+		{
+			EbaySearchResultLocatorsobj.cbxBangladesh.click();
+		}
+		else if (region.equals("United States"))
+		{
+			EbaySearchResultLocatorsobj.cbxUSA.click();
+		}
+		else {
+			System.out.println("Brand not found, please implement !");
+		}
+	}
+	public void verifyBrandRegion(String region) {
+		if (region.equals("China"))
+		{
+			EbaySearchResultLocatorsobj.txtShoes.isDisplayed();
+		}
+			else if (region.equals("Bangladesh"))
+			{	
+				EbaySearchResultLocatorsobj.txtShirts.isDisplayed();
+			}
+			else if (region.equals("United States"))
+			{
+				EbaySearchResultLocatorsobj.txtPants.isDisplayed();
+			}
+			else {
+				System.out.println("Brand not found, please implement !");
+			}
+		
+
+}
+
+		public void firstShirtItem() {
+			EbaySearchResultLocatorsobj.linkShirt.click();
+			
+			
+		}
+		public void switchNewWindow() {
+			for(String winhandle: SetupDrivers.driver.getWindowHandles()){
+				SetupDrivers.driver.switchTo().window(winhandle);	
+			}
+
+
+		}
 }

@@ -16,7 +16,7 @@ public class readExcelSheet {
 	
 	public static Map<String, Map<String, String>> setMapData() throws Exception{
 		
-		String path = System.getProperty("user.dir")+ "/src/test/resource/Datasheets/EbayDataSheet.numbers";
+		String path = System.getProperty("user.dir")+ "/src/test/resource/Datasheets/EbayDataSheet.xlsx";
 		
 		FileInputStream fis = new FileInputStream(path);
 		
